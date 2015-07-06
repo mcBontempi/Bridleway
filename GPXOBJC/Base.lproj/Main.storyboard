@@ -16,23 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-<<<<<<< HEAD
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="D3G-YH-qTf">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </mapView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="D3G-YH-qTf" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="Tke-Wf-HpE"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="D3G-YH-qTf" secondAttribute="bottom" id="vLf-Ym-9e0"/>
-                            <constraint firstItem="D3G-YH-qTf" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="vdj-NC-JlN"/>
-                            <constraint firstAttribute="trailing" secondItem="D3G-YH-qTf" secondAttribute="trailing" id="zGc-4U-aIX"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="mapView" destination="D3G-YH-qTf" id="eYF-hd-IfW"/>
-=======
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="sfy-9W-yjW">
+                   <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="sfy-9W-yjW">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="224"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="224" id="Z0f-Gc-AMJ"/>
@@ -82,7 +66,7 @@
                         <outlet property="distanceLabel" destination="sfy-9W-yjW" id="VQm-8s-3fC"/>
                         <outlet property="slider" destination="F4V-Ao-Mfr" id="AWY-81-OLb"/>
                         <outlet property="sliderLabel" destination="Gdj-wC-Yvx" id="hIb-81-QDr"/>
->>>>>>> 828925769cb08bc0c38a7d34fee16dbba6ef0e4d
+f0e4d
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

@@ -129,7 +129,6 @@
         
     }
     
-    >>>>>>> 828925769cb08bc0c38a7d34fee16dbba6ef0e4d
 }
 
 - (void)populateArray {

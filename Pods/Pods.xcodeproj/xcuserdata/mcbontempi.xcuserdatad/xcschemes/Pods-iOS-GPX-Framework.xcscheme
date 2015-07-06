@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "63E3D2D3EFBEA067A807868D"
+               BlueprintIdentifier = "D675CE6C6EBA222A27BE3993"
                BuildableName = "libPods-iOS-GPX-Framework.a"
                BlueprintName = "Pods-iOS-GPX-Framework"
                ReferencedContainer = "container:Pods.xcodeproj">

@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		363FA8541422BEC2F7BB1C07 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FAA48931B2A5C8AF47DA8A4 /* libPods.a */; };
-		D63857151B4AC0420002C6CC /* loop.gpx in Resources */ = {isa = PBXBuildFile; fileRef = D63857141B4AC0420002C6CC /* loop.gpx */; };
-		D63857171B4AC0850002C6CC /* touttox.gpx in Resources */ = {isa = PBXBuildFile; fileRef = D63857161B4AC0850002C6CC /* touttox.gpx */; };
 		D6EF26791B4416E400AA5B68 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EF26781B4416E400AA5B68 /* main.m */; };
 		D6EF267C1B4416E400AA5B68 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EF267B1B4416E400AA5B68 /* AppDelegate.m */; };
 		D6EF267F1B4416E400AA5B68 /* GPXOBJC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6EF267D1B4416E400AA5B68 /* GPXOBJC.xcdatamodeld */; };
@@ -19,7 +17,6 @@
 		D6EF268A1B4416E400AA5B68 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6EF26881B4416E400AA5B68 /* LaunchScreen.xib */; };
 		D6EF26961B4416E400AA5B68 /* GPXOBJCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EF26951B4416E400AA5B68 /* GPXOBJCTests.m */; };
 		D6EF26A21B4428DE00AA5B68 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6EF26A11B4428DE00AA5B68 /* CoreLocation.framework */; };
-		D6EF26B31B442B9200AA5B68 /* README.markdown in Sources */ = {isa = PBXBuildFile; fileRef = D6EF26AE1B442B9200AA5B68 /* README.markdown */; };
 		FD0A1E911B46D21B00029C87 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0A1E901B46D21B00029C87 /* MapKit.framework */; };
 		FD0A1E931B46E9C200029C87 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0A1E921B46E9C100029C87 /* AudioToolbox.framework */; };
 		FD25B5761B47525600DEB5EA /* penninewayinterpolated.gpx in Resources */ = {isa = PBXBuildFile; fileRef = FD25B5741B47525600DEB5EA /* penninewayinterpolated.gpx */; };
@@ -41,8 +38,6 @@
 		392EC95EBB6E8103F3204D00 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		3FAA48931B2A5C8AF47DA8A4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A0F586A1CCF2378AA6944A9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		D63857141B4AC0420002C6CC /* loop.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = loop.gpx; sourceTree = "<group>"; };
-		D63857161B4AC0850002C6CC /* touttox.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = touttox.gpx; sourceTree = "<group>"; };
 		D6EF26731B4416E400AA5B68 /* GPXOBJC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPXOBJC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6EF26771B4416E400AA5B68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6EF26781B4416E400AA5B68 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -58,7 +53,6 @@
 		D6EF26941B4416E400AA5B68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6EF26951B4416E400AA5B68 /* GPXOBJCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPXOBJCTests.m; sourceTree = "<group>"; };
 		D6EF26A11B4428DE00AA5B68 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		D6EF26AE1B442B9200AA5B68 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.markdown; sourceTree = "<group>"; };
 		FD0A1E901B46D21B00029C87 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		FD0A1E921B46E9C100029C87 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		FD25B5741B47525600DEB5EA /* penninewayinterpolated.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = penninewayinterpolated.gpx; sourceTree = "<group>"; };
@@ -131,7 +125,6 @@
 		D6EF26751B4416E400AA5B68 /* GPXOBJC */ = {
 			isa = PBXGroup;
 			children = (
-				D6EF26A31B442B9200AA5B68 /* CoreLocationUtils */,
 				D6EF267A1B4416E400AA5B68 /* AppDelegate.h */,
 				FD25B57A1B47F42F00DEB5EA /* touttoxinterpolated.gpx */,
 				FD25B5741B47525600DEB5EA /* penninewayinterpolated.gpx */,
@@ -172,21 +165,6 @@
 				D6EF26941B4416E400AA5B68 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		D6EF26A31B442B9200AA5B68 /* CoreLocationUtils */ = {
-			isa = PBXGroup;
-			children = (
-<<<<<<< HEAD
-				D63857161B4AC0850002C6CC /* touttox.gpx */,
-				D63857141B4AC0420002C6CC /* loop.gpx */,
-				FD678CDA1B46F0C100D2FB84 /* teanride.gpx */,
-=======
-				D6EF26A41B442B9200AA5B68 /* CoreLocationUtils */,
->>>>>>> 828925769cb08bc0c38a7d34fee16dbba6ef0e4d
-				D6EF26AE1B442B9200AA5B68 /* README.markdown */,
-			);
-			path = CoreLocationUtils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,18 +257,11 @@
 			files = (
 				D6EF26851B4416E400AA5B68 /* Main.storyboard in Resources */,
 				D6EF268A1B4416E400AA5B68 /* LaunchScreen.xib in Resources */,
-<<<<<<< HEAD
-				FD678CDB1B46F0C100D2FB84 /* teanride.gpx in Resources */,
-				D63857151B4AC0420002C6CC /* loop.gpx in Resources */,
-				D6EF26A01B44186200AA5B68 /* trail.gpx in Resources */,
 				D6EF26871B4416E400AA5B68 /* Images.xcassets in Resources */,
-				D63857171B4AC0850002C6CC /* touttox.gpx in Resources */,
-=======
 				FD25B5771B47525600DEB5EA /* teanrideinterpolated.gpx in Resources */,
 				D6EF26871B4416E400AA5B68 /* Images.xcassets in Resources */,
 				FD25B57B1B47F42F00DEB5EA /* touttoxinterpolated.gpx in Resources */,
 				FD25B5761B47525600DEB5EA /* penninewayinterpolated.gpx in Resources */,
->>>>>>> 828925769cb08bc0c38a7d34fee16dbba6ef0e4d
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,7 +315,6 @@
 				D6EF267C1B4416E400AA5B68 /* AppDelegate.m in Sources */,
 				D6EF26791B4416E400AA5B68 /* main.m in Sources */,
 				D6EF26821B4416E400AA5B68 /* ViewController.m in Sources */,
-				D6EF26B31B442B9200AA5B68 /* README.markdown in Sources */,
 				D6EF267F1B4416E400AA5B68 /* GPXOBJC.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -471,7 +441,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 392EC95EBB6E8103F3204D00 /* Pods.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = GPXOBJC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -483,7 +452,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6A0F586A1CCF2378AA6944A9 /* Pods.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = GPXOBJC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

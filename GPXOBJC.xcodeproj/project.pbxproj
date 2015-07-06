@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		363FA8541422BEC2F7BB1C07 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FAA48931B2A5C8AF47DA8A4 /* libPods.a */; };
+		D63857151B4AC0420002C6CC /* loop.gpx in Resources */ = {isa = PBXBuildFile; fileRef = D63857141B4AC0420002C6CC /* loop.gpx */; };
+		D63857171B4AC0850002C6CC /* touttox.gpx in Resources */ = {isa = PBXBuildFile; fileRef = D63857161B4AC0850002C6CC /* touttox.gpx */; };
 		D6EF26791B4416E400AA5B68 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EF26781B4416E400AA5B68 /* main.m */; };
 		D6EF267C1B4416E400AA5B68 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EF267B1B4416E400AA5B68 /* AppDelegate.m */; };
 		D6EF267F1B4416E400AA5B68 /* GPXOBJC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6EF267D1B4416E400AA5B68 /* GPXOBJC.xcdatamodeld */; };
@@ -18,10 +20,6 @@
 		D6EF26961B4416E400AA5B68 /* GPXOBJCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EF26951B4416E400AA5B68 /* GPXOBJCTests.m */; };
 		D6EF26A01B44186200AA5B68 /* trail.gpx in Resources */ = {isa = PBXBuildFile; fileRef = D6EF269F1B44186200AA5B68 /* trail.gpx */; };
 		D6EF26A21B4428DE00AA5B68 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6EF26A11B4428DE00AA5B68 /* CoreLocation.framework */; };
-		D6EF26AF1B442B9200AA5B68 /* CLLocation+measuring.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EF26A61B442B9200AA5B68 /* CLLocation+measuring.m */; };
-		D6EF26B01B442B9200AA5B68 /* CLLocation+routeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EF26A81B442B9200AA5B68 /* CLLocation+routeInfo.m */; };
-		D6EF26B11B442B9200AA5B68 /* CLLocationDeadReckoning.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EF26AA1B442B9200AA5B68 /* CLLocationDeadReckoning.m */; };
-		D6EF26B21B442B9200AA5B68 /* CLLocationDispatch.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EF26AC1B442B9200AA5B68 /* CLLocationDispatch.m */; };
 		D6EF26B31B442B9200AA5B68 /* README.markdown in Sources */ = {isa = PBXBuildFile; fileRef = D6EF26AE1B442B9200AA5B68 /* README.markdown */; };
 		D6EF26B51B44340B00AA5B68 /* rw.gpx in Resources */ = {isa = PBXBuildFile; fileRef = D6EF26B41B44340B00AA5B68 /* rw.gpx */; };
 		FD0A1E911B46D21B00029C87 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0A1E901B46D21B00029C87 /* MapKit.framework */; };
@@ -43,6 +41,8 @@
 		392EC95EBB6E8103F3204D00 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		3FAA48931B2A5C8AF47DA8A4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A0F586A1CCF2378AA6944A9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		D63857141B4AC0420002C6CC /* loop.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = loop.gpx; sourceTree = "<group>"; };
+		D63857161B4AC0850002C6CC /* touttox.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = touttox.gpx; sourceTree = "<group>"; };
 		D6EF26731B4416E400AA5B68 /* GPXOBJC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPXOBJC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6EF26771B4416E400AA5B68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6EF26781B4416E400AA5B68 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -59,15 +59,6 @@
 		D6EF26951B4416E400AA5B68 /* GPXOBJCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPXOBJCTests.m; sourceTree = "<group>"; };
 		D6EF269F1B44186200AA5B68 /* trail.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = trail.gpx; sourceTree = "<group>"; };
 		D6EF26A11B4428DE00AA5B68 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		D6EF26A51B442B9200AA5B68 /* CLLocation+measuring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+measuring.h"; sourceTree = "<group>"; };
-		D6EF26A61B442B9200AA5B68 /* CLLocation+measuring.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+measuring.m"; sourceTree = "<group>"; };
-		D6EF26A71B442B9200AA5B68 /* CLLocation+routeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+routeInfo.h"; sourceTree = "<group>"; };
-		D6EF26A81B442B9200AA5B68 /* CLLocation+routeInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+routeInfo.m"; sourceTree = "<group>"; };
-		D6EF26A91B442B9200AA5B68 /* CLLocationDeadReckoning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLLocationDeadReckoning.h; sourceTree = "<group>"; };
-		D6EF26AA1B442B9200AA5B68 /* CLLocationDeadReckoning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLLocationDeadReckoning.m; sourceTree = "<group>"; };
-		D6EF26AB1B442B9200AA5B68 /* CLLocationDispatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLLocationDispatch.h; sourceTree = "<group>"; };
-		D6EF26AC1B442B9200AA5B68 /* CLLocationDispatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLLocationDispatch.m; sourceTree = "<group>"; };
-		D6EF26AD1B442B9200AA5B68 /* CLUtilsDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUtilsDefines.h; sourceTree = "<group>"; };
 		D6EF26AE1B442B9200AA5B68 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.markdown; sourceTree = "<group>"; };
 		D6EF26B41B44340B00AA5B68 /* rw.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = rw.gpx; sourceTree = "<group>"; };
 		FD0A1E901B46D21B00029C87 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -185,25 +176,10 @@
 		D6EF26A31B442B9200AA5B68 /* CoreLocationUtils */ = {
 			isa = PBXGroup;
 			children = (
+				D63857161B4AC0850002C6CC /* touttox.gpx */,
+				D63857141B4AC0420002C6CC /* loop.gpx */,
 				FD678CDA1B46F0C100D2FB84 /* teanride.gpx */,
-				D6EF26A41B442B9200AA5B68 /* CoreLocationUtils */,
 				D6EF26AE1B442B9200AA5B68 /* README.markdown */,
-			);
-			path = CoreLocationUtils;
-			sourceTree = "<group>";
-		};
-		D6EF26A41B442B9200AA5B68 /* CoreLocationUtils */ = {
-			isa = PBXGroup;
-			children = (
-				D6EF26A51B442B9200AA5B68 /* CLLocation+measuring.h */,
-				D6EF26A61B442B9200AA5B68 /* CLLocation+measuring.m */,
-				D6EF26A71B442B9200AA5B68 /* CLLocation+routeInfo.h */,
-				D6EF26A81B442B9200AA5B68 /* CLLocation+routeInfo.m */,
-				D6EF26A91B442B9200AA5B68 /* CLLocationDeadReckoning.h */,
-				D6EF26AA1B442B9200AA5B68 /* CLLocationDeadReckoning.m */,
-				D6EF26AB1B442B9200AA5B68 /* CLLocationDispatch.h */,
-				D6EF26AC1B442B9200AA5B68 /* CLLocationDispatch.m */,
-				D6EF26AD1B442B9200AA5B68 /* CLUtilsDefines.h */,
 			);
 			path = CoreLocationUtils;
 			sourceTree = "<group>";
@@ -294,8 +270,10 @@
 				D6EF26851B4416E400AA5B68 /* Main.storyboard in Resources */,
 				D6EF268A1B4416E400AA5B68 /* LaunchScreen.xib in Resources */,
 				FD678CDB1B46F0C100D2FB84 /* teanride.gpx in Resources */,
+				D63857151B4AC0420002C6CC /* loop.gpx in Resources */,
 				D6EF26A01B44186200AA5B68 /* trail.gpx in Resources */,
 				D6EF26871B4416E400AA5B68 /* Images.xcassets in Resources */,
+				D63857171B4AC0850002C6CC /* touttox.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,15 +324,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6EF26AF1B442B9200AA5B68 /* CLLocation+measuring.m in Sources */,
-				D6EF26B01B442B9200AA5B68 /* CLLocation+routeInfo.m in Sources */,
 				D6EF267C1B4416E400AA5B68 /* AppDelegate.m in Sources */,
 				D6EF26791B4416E400AA5B68 /* main.m in Sources */,
 				D6EF26821B4416E400AA5B68 /* ViewController.m in Sources */,
 				D6EF26B31B442B9200AA5B68 /* README.markdown in Sources */,
 				D6EF267F1B4416E400AA5B68 /* GPXOBJC.xcdatamodeld in Sources */,
-				D6EF26B11B442B9200AA5B68 /* CLLocationDeadReckoning.m in Sources */,
-				D6EF26B21B442B9200AA5B68 /* CLLocationDispatch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

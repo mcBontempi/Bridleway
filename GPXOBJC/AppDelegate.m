@@ -8,7 +8,12 @@
 
 #import "AppDelegate.h"
 
+
+#import <CoreLocation/CoreLocation.h>
+
+
 @interface AppDelegate ()
+@property (strong, nonatomic) CLLocationManager *locationManager;
 
 @end
 
@@ -16,7 +21,25 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+  
+  
+  
+  
+  self.locationManager = [[CLLocationManager alloc] init];
+  self.locationManager.delegate = self;
+  
+  self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+  // self.locationManager.distanceFilter = 2;
+  
+  [self.locationManager requestAlwaysAuthorization];
+  [self.locationManager startUpdatingLocation];
+  
+  
+  
+  
+  
+  
+  
     return YES;
 }
 

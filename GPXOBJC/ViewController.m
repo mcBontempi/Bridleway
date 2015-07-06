@@ -57,7 +57,7 @@
     [self.locationManager requestWhenInUseAuthorization];
     [self.locationManager startUpdatingLocation];
     
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"touttox" ofType:@"gpx"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"PennineBridelwayDouble" ofType:@"gpx"];
     self.root = [GPXParser parseGPXAtPath:path];
     
     [self populateArray];

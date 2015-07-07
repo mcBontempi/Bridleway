@@ -23,7 +23,7 @@
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @property (strong, nonatomic) GPXRoot *root;
-@property (strong, nonatomic) NSMutableArray *pointArray;
+@property (strong, nonatomic) NSMutableArray *pointArrayArray;
 @property (strong, nonatomic) NSMutableArray *interpolatedPointArray;
 
 @property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
@@ -81,10 +81,9 @@
 {
   MapViewController *vc = segue.destinationViewController;
   
-  NSMutableArray *mutableArray = [NSMutableArray arrayWithArray:self.pointArray];
-  vc.pointArray = [mutableArray copy];
-  
-  
+  vc.pointArrayArray = [self.pointArrayArray copy];
+
+ // vc.pointArray = self.interpolatedPointArray;
 }
 
 
@@ -103,13 +102,14 @@
     
     __block NSInteger count = 0;
     
-    
+    /*
     [self.pointArray enumerateObjectsUsingBlock:^(CLLocation *location, NSUInteger idx, BOOL *stop) {
       double distance = [location distanceFromLocation:currentLocation];
       minimumDistance = MIN(minimumDistance, distance);
       
       count++;
     }];
+    */
     
     [self.interpolatedPointArray enumerateObjectsUsingBlock:^(CLLocation *location, NSUInteger idx, BOOL *stop) {
       double distance = [location distanceFromLocation:currentLocation];
@@ -146,20 +146,26 @@
 }
 
 - (void)populateArray {
-  self.pointArray = [@[] mutableCopy];
+  self.pointArrayArray = [@[] mutableCopy];
   [self.root.tracks enumerateObjectsUsingBlock:^(GPXTrack *track, NSUInteger idx, BOOL *stop) {
+    
     [track.tracksegments enumerateObjectsUsingBlock:^(GPXTrackSegment *trackSegement, NSUInteger idx, BOOL *stop) {
+      __block NSMutableArray *array = [@[] mutableCopy];
+      [self.pointArrayArray addObject:array];
       [trackSegement.trackpoints  enumerateObjectsUsingBlock:^(GPXTrackPoint *trackPoint, NSUInteger idx, BOOL *stop) {
         CLLocation *location = [[CLLocation alloc] initWithLatitude:trackPoint.latitude longitude:trackPoint.longitude];
-        [self.pointArray addObject:location];
+        [array addObject:location];
       }];
     }];
   }];
   
   [self.root.routes enumerateObjectsUsingBlock:^(GPXRoute *route, NSUInteger idx, BOOL *stop) {
+    __block NSMutableArray *array = [@[] mutableCopy];
+    [self.pointArrayArray addObject:array];
+    
     [route.routepoints  enumerateObjectsUsingBlock:^(GPXTrackPoint *trackPoint, NSUInteger idx, BOOL *stop) {
       CLLocation *location = [[CLLocation alloc] initWithLatitude:trackPoint.latitude longitude:trackPoint.longitude];
-      [self.pointArray addObject:location];
+      [array addObject:location];
     }];
   }];
 }
@@ -167,37 +173,24 @@
 - (void)interpolateWith:(double)metres
 {
   self.interpolatedPointArray = [@[] mutableCopy];
-  
   __block CLLocation *lastlocation;
-  
-  [self.pointArray enumerateObjectsUsingBlock:^(CLLocation *location, NSUInteger idx, BOOL *stop) {
-    
+  [self.pointArrayArray enumerateObjectsUsingBlock:^(NSArray *array, NSUInteger idx, BOOL *stop) {
+  [array enumerateObjectsUsingBlock:^(CLLocation *location, NSUInteger idx, BOOL *stop) {
     if (lastlocation) {
-      
       double distance = [location distanceFromLocation:lastlocation];
-      
-      if (distance > metres) {
-        
+     // if (distance > metres) {
         double bearing = [self bearingToLocation:location fromLocation:lastlocation];
-        
         for (int i = 0 ; i < distance / metres ; i++) {
-          
           CLLocationCoordinate2D cooridinate = [[self class]locationWithBearing:bearing distance:metres*i fromLocation:lastlocation.coordinate];
           CLLocation *interpolatedLocation = [[CLLocation alloc] initWithLatitude:cooridinate.latitude longitude:cooridinate.longitude];
-          
           [self.interpolatedPointArray addObject:interpolatedLocation];
-          
         }
-        
-      }
-      
+    //  }
     }
-    
     lastlocation = location;
-    
+  }];
   }];
 }
-
 
 +(CLLocationCoordinate2D) locationWithBearing:(float)bearing distance:(float)distanceMeters fromLocation:(CLLocationCoordinate2D)origin {
   CLLocationCoordinate2D target;

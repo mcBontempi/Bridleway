@@ -10,6 +10,7 @@
 
 @interface MapViewController : UIViewController
 
+@property (nonatomic, strong) NSArray *pointArrayArray;
 @property (nonatomic, strong) NSArray *pointArray;
 
 @end

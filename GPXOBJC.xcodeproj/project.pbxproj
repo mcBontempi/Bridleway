@@ -20,6 +20,7 @@
 		FD0A1E911B46D21B00029C87 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0A1E901B46D21B00029C87 /* MapKit.framework */; };
 		FD0A1E931B46E9C200029C87 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0A1E921B46E9C100029C87 /* AudioToolbox.framework */; };
 		FD25B57D1B4AEDCC00DEB5EA /* PennineBridelwayDouble.gpx in Resources */ = {isa = PBXBuildFile; fileRef = FD25B57C1B4AEDCC00DEB5EA /* PennineBridelwayDouble.gpx */; };
+		FD25B5801B4AEF4400DEB5EA /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD25B57F1B4AEF4400DEB5EA /* MapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		FD0A1E901B46D21B00029C87 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		FD0A1E921B46E9C100029C87 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		FD25B57C1B4AEDCC00DEB5EA /* PennineBridelwayDouble.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = PennineBridelwayDouble.gpx; sourceTree = "<group>"; };
+		FD25B57E1B4AEF4400DEB5EA /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		FD25B57F1B4AEF4400DEB5EA /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +134,8 @@
 				D6EF26881B4416E400AA5B68 /* LaunchScreen.xib */,
 				D6EF267D1B4416E400AA5B68 /* GPXOBJC.xcdatamodeld */,
 				D6EF26761B4416E400AA5B68 /* Supporting Files */,
+				FD25B57E1B4AEF4400DEB5EA /* MapViewController.h */,
+				FD25B57F1B4AEF4400DEB5EA /* MapViewController.m */,
 			);
 			path = GPXOBJC;
 			sourceTree = "<group>";
@@ -306,6 +311,7 @@
 			files = (
 				D6EF267C1B4416E400AA5B68 /* AppDelegate.m in Sources */,
 				D6EF26791B4416E400AA5B68 /* main.m in Sources */,
+				FD25B5801B4AEF4400DEB5EA /* MapViewController.m in Sources */,
 				D6EF26821B4416E400AA5B68 /* ViewController.m in Sources */,
 				D6EF267F1B4416E400AA5B68 /* GPXOBJC.xcdatamodeld in Sources */,
 			);

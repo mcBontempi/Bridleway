@@ -38,6 +38,19 @@
 
 @implementation ViewController
 
+- (NSMutableArray *)pointArrayArray
+{
+  if (!_pointArrayArray) {
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"ttmp" ofType:@"gpx"];
+    self.root = [GPXParser parseGPXAtPath:path];
+    
+    [self populateArray];
+    
+  }
+  
+  return _pointArrayArray;
+}
+
 - (IBAction)sliderValueChanged:(id)sender
 {
   [self updateSliderLabel];
@@ -60,16 +73,12 @@
   [self.locationManager requestWhenInUseAuthorization];
   [self.locationManager startUpdatingLocation];
   
-  NSString *path = [[NSBundle mainBundle] pathForResource:@"PennineBridelwayDouble" ofType:@"gpx"];
-  self.root = [GPXParser parseGPXAtPath:path];
-  
-  [self populateArray];
   
   [self interpolateWith:5];
   
   [super viewDidLoad];
   
-  self.slider.value = 10;
+  self.slider.value = 25;
   
   self.timeSinceLast = [[NSDate date] timeIntervalSince1970];
   
@@ -146,12 +155,12 @@
 }
 
 - (void)populateArray {
-  self.pointArrayArray = [@[] mutableCopy];
+  _pointArrayArray = [@[] mutableCopy];
   [self.root.tracks enumerateObjectsUsingBlock:^(GPXTrack *track, NSUInteger idx, BOOL *stop) {
     
     [track.tracksegments enumerateObjectsUsingBlock:^(GPXTrackSegment *trackSegement, NSUInteger idx, BOOL *stop) {
       __block NSMutableArray *array = [@[] mutableCopy];
-      [self.pointArrayArray addObject:array];
+      [_pointArrayArray addObject:array];
       [trackSegement.trackpoints  enumerateObjectsUsingBlock:^(GPXTrackPoint *trackPoint, NSUInteger idx, BOOL *stop) {
         CLLocation *location = [[CLLocation alloc] initWithLatitude:trackPoint.latitude longitude:trackPoint.longitude];
         [array addObject:location];
@@ -161,7 +170,7 @@
   
   [self.root.routes enumerateObjectsUsingBlock:^(GPXRoute *route, NSUInteger idx, BOOL *stop) {
     __block NSMutableArray *array = [@[] mutableCopy];
-    [self.pointArrayArray addObject:array];
+    [_pointArrayArray addObject:array];
     
     [route.routepoints  enumerateObjectsUsingBlock:^(GPXTrackPoint *trackPoint, NSUInteger idx, BOOL *stop) {
       CLLocation *location = [[CLLocation alloc] initWithLatitude:trackPoint.latitude longitude:trackPoint.longitude];

@@ -19,6 +19,8 @@
 		D6EF26A21B4428DE00AA5B68 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6EF26A11B4428DE00AA5B68 /* CoreLocation.framework */; };
 		FD0A1E911B46D21B00029C87 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0A1E901B46D21B00029C87 /* MapKit.framework */; };
 		FD0A1E931B46E9C200029C87 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0A1E921B46E9C100029C87 /* AudioToolbox.framework */; };
+		FD24C8571B4C74860005586D /* ToUttox.gpx in Resources */ = {isa = PBXBuildFile; fileRef = FD24C8561B4C74860005586D /* ToUttox.gpx */; };
+		FD24C8591B4D87630005586D /* ttmp.gpx in Resources */ = {isa = PBXBuildFile; fileRef = FD24C8581B4D87630005586D /* ttmp.gpx */; };
 		FD25B57D1B4AEDCC00DEB5EA /* PennineBridelwayDouble.gpx in Resources */ = {isa = PBXBuildFile; fileRef = FD25B57C1B4AEDCC00DEB5EA /* PennineBridelwayDouble.gpx */; };
 		FD25B5801B4AEF4400DEB5EA /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD25B57F1B4AEF4400DEB5EA /* MapViewController.m */; };
 /* End PBXBuildFile section */
@@ -54,6 +56,8 @@
 		D6EF26A11B4428DE00AA5B68 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		FD0A1E901B46D21B00029C87 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		FD0A1E921B46E9C100029C87 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		FD24C8561B4C74860005586D /* ToUttox.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ToUttox.gpx; sourceTree = "<group>"; };
+		FD24C8581B4D87630005586D /* ttmp.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ttmp.gpx; sourceTree = "<group>"; };
 		FD25B57C1B4AEDCC00DEB5EA /* PennineBridelwayDouble.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = PennineBridelwayDouble.gpx; sourceTree = "<group>"; };
 		FD25B57E1B4AEF4400DEB5EA /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		FD25B57F1B4AEF4400DEB5EA /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
@@ -124,7 +128,9 @@
 		D6EF26751B4416E400AA5B68 /* GPXOBJC */ = {
 			isa = PBXGroup;
 			children = (
+				FD24C8581B4D87630005586D /* ttmp.gpx */,
 				FD25B57C1B4AEDCC00DEB5EA /* PennineBridelwayDouble.gpx */,
+				FD24C8561B4C74860005586D /* ToUttox.gpx */,
 				D6EF267A1B4416E400AA5B68 /* AppDelegate.h */,
 				D6EF267B1B4416E400AA5B68 /* AppDelegate.m */,
 				D6EF26801B4416E400AA5B68 /* ViewController.h */,
@@ -257,7 +263,9 @@
 				D6EF26851B4416E400AA5B68 /* Main.storyboard in Resources */,
 				D6EF268A1B4416E400AA5B68 /* LaunchScreen.xib in Resources */,
 				D6EF26871B4416E400AA5B68 /* Images.xcassets in Resources */,
+				FD24C8571B4C74860005586D /* ToUttox.gpx in Resources */,
 				FD25B57D1B4AEDCC00DEB5EA /* PennineBridelwayDouble.gpx in Resources */,
+				FD24C8591B4D87630005586D /* ttmp.gpx in Resources */,
 				D6EF26871B4416E400AA5B68 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

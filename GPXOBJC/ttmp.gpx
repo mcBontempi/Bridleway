@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx creator="StravaGPX" version="1.1" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+ <metadata>
+  <name>tean to meir park</name>
+  <author>
+   <name>Daren Ironman Taylor</name>
+   <link href="https://www.strava.com/athletes/1087977"/>
+  </author>
+  <link href="https://www.strava.com/routes/2764156"/>
+ </metadata>
+ <trk>
+  <name>tean to meir park</name>
+  <link href="https://www.strava.com/routes/2764156"/>
+  <type>Ride</type>
+  <trkseg>
+   <trkpt lat="52.95787000000001" lon="-2.0270300000000003"/>
+   <trkpt lat="52.95794000000001" lon="-2.02746"/>
+   <trkpt lat="52.95814000000001" lon="-2.02828"/>
+   <trkpt lat="52.95861000000001" lon="-2.0300700000000003"/>
+   <trkpt lat="52.959120000000006" lon="-2.0319100000000003"/>
+   <trkpt lat="52.96013000000001" lon="-2.03596"/>
+   <trkpt lat="52.96025" lon="-2.0364"/>
+   <trkpt lat="52.96069000000001" lon="-2.03816"/>
+   <trkpt lat="52.962360000000004" lon="-2.04416"/>
+   <trkpt lat="52.96275000000001" lon="-2.0455900000000002"/>
+   <trkpt lat="52.96284000000001" lon="-2.04589"/>
+   <trkpt lat="52.962970000000006" lon="-2.04652"/>
+   <trkpt lat="52.96305" lon="-2.0468100000000002"/>
+   <trkpt lat="52.963420000000006" lon="-2.04828"/>
+   <trkpt lat="52.96343" lon="-2.04841"/>
+   <trkpt lat="52.9635" lon="-2.04855"/>
+   <trkpt lat="52.963570000000004" lon="-2.04901"/>
+   <trkpt lat="52.963640000000005" lon="-2.05006"/>
+   <trkpt lat="52.96363" lon="-2.05036"/>
+   <trkpt lat="52.96369000000001" lon="-2.05051"/>
+   <trkpt lat="52.963820000000005" lon="-2.0506100000000003"/>
+   <trkpt lat="52.96381" lon="-2.05073"/>
+   <trkpt lat="52.96405000000001" lon="-2.0507600000000004"/>
+   <trkpt lat="52.964420000000004" lon="-2.05201"/>
+   <trkpt lat="52.964620000000004" lon="-2.0527900000000003"/>
+   <trkpt lat="52.96497" lon="-2.05457"/>
+   <trkpt lat="52.965030000000006" lon="-2.05491"/>
+   <trkpt lat="52.96517000000001" lon="-2.0554900000000003"/>
+   <trkpt lat="52.96799000000001" lon="-2.0658600000000003"/>
+   <trkpt lat="52.968090000000004" lon="-2.0664100000000003"/>
+   <trkpt lat="52.96837000000001" lon="-2.06907"/>
+   <trkpt lat="52.968500000000006" lon="-2.06969"/>
+   <trkpt lat="52.969210000000004" lon="-2.07206"/>
+   <trkpt lat="52.96960000000001" lon="-2.0733300000000003"/>
+   <trkpt lat="52.9697" lon="-2.07358"/>
+   <trkpt lat="52.97017" lon="-2.0748800000000003"/>
+   <trkpt lat="52.970490000000005" lon="-2.07574"/>
+   <trkpt lat="52.970890000000004" lon="-2.0770500000000003"/>
+   <trkpt lat="52.9716" lon="-2.08007"/>
+   <trkpt lat="52.97283" lon="-2.08489"/>
+   <trkpt lat="52.97288" lon="-2.0852500000000003"/>
+   <trkpt lat="52.972770000000004" lon="-2.08562"/>
+   <trkpt lat="52.97261" lon="-2.08588"/>
+   <trkpt lat="52.972530000000006" lon="-2.08596"/>
+   <trkpt lat="52.972390000000004" lon="-2.08602"/>
+   <trkpt lat="52.97229" lon="-2.08615"/>
+   <trkpt lat="52.972100000000005" lon="-2.08663"/>
+   <trkpt lat="52.972060000000006" lon="-2.08683"/>
+   <trkpt lat="52.97205" lon="-2.08698"/>
+   <trkpt lat="52.972080000000005" lon="-2.08718"/>
+   <trkpt lat="52.97196" lon="-2.0876200000000003"/>
+   <trkpt lat="52.97187" lon="-2.08778"/>
+   <trkpt lat="52.971450000000004" lon="-2.08805"/>
+   <trkpt lat="52.97083000000001" lon="-2.0885200000000004"/>
+   <trkpt lat="52.97086" lon="-2.08863"/>
+   <trkpt lat="52.97086" lon="-2.0887100000000003"/>
+   <trkpt lat="52.97084" lon="-2.0887800000000003"/>
+   <trkpt lat="52.97079" lon="-2.0888400000000003"/>
+   <trkpt lat="52.97081000000001" lon="-2.08895"/>
+   <trkpt lat="52.97097" lon="-2.08954"/>
+   <trkpt lat="52.971070000000005" lon="-2.0900100000000004"/>
+   <trkpt lat="52.97119000000001" lon="-2.09051"/>
+  </trkseg>
+ </trk>
+</gpx>

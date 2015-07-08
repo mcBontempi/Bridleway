@@ -83,13 +83,13 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEf-p7-EpK">
-                                <rect key="frame" x="18" y="18" width="28" height="28"/>
+                                <rect key="frame" x="552" y="8" width="40" height="30"/>
                                 <color key="backgroundColor" red="0.75686274509999996" green="0.74901960779999999" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="28" id="O1N-fY-p5x"/>
-                                    <constraint firstAttribute="width" constant="28" id="PjW-KN-v0b"/>
+                                    <constraint firstAttribute="height" constant="30" id="O1N-fY-p5x"/>
+                                    <constraint firstAttribute="width" constant="40" id="PjW-KN-v0b"/>
                                 </constraints>
-                                <state key="normal">
+                                <state key="normal" title="You">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -97,13 +97,13 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vt5-uy-hIP">
-                                <rect key="frame" x="18" y="18" width="28" height="28"/>
+                                <rect key="frame" x="8" y="8" width="40" height="28"/>
                                 <color key="backgroundColor" red="0.32817466020000002" green="0.94887204140000003" blue="0.2768394253" alpha="0.62" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="aZB-fT-CEP"/>
-                                    <constraint firstAttribute="width" constant="28" id="dPJ-ij-r8S"/>
+                                    <constraint firstAttribute="width" constant="40" id="dPJ-ij-r8S"/>
                                 </constraints>
-                                <state key="normal">
+                                <state key="normal" title="All">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -118,21 +118,23 @@
                             <constraint firstItem="4Ap-5x-c1A" firstAttribute="leading" secondItem="H2R-YD-tQz" secondAttribute="leading" id="Ecj-eJ-pT6"/>
                             <constraint firstAttribute="trailing" secondItem="CFL-xy-mKc" secondAttribute="trailing" id="EnE-Sz-w2y"/>
                             <constraint firstItem="CFL-xy-mKc" firstAttribute="leading" secondItem="H2R-YD-tQz" secondAttribute="leading" id="Lge-uK-ido"/>
-                            <constraint firstItem="vt5-uy-hIP" firstAttribute="top" secondItem="N2n-Ac-vt0" secondAttribute="bottom" constant="18" id="RKo-bg-2OX"/>
-                            <constraint firstItem="cEf-p7-EpK" firstAttribute="top" secondItem="N2n-Ac-vt0" secondAttribute="bottom" constant="18" id="Txk-Gz-7gg"/>
+                            <constraint firstItem="vt5-uy-hIP" firstAttribute="top" secondItem="N2n-Ac-vt0" secondAttribute="bottom" constant="8" id="RKo-bg-2OX"/>
+                            <constraint firstItem="cEf-p7-EpK" firstAttribute="top" secondItem="N2n-Ac-vt0" secondAttribute="bottom" constant="8" id="Txk-Gz-7gg"/>
                             <constraint firstAttribute="trailing" secondItem="4Ap-5x-c1A" secondAttribute="trailing" id="bhj-A0-ZK5"/>
                             <constraint firstItem="hSL-Fw-oU3" firstAttribute="top" secondItem="4Ap-5x-c1A" secondAttribute="bottom" id="doM-2x-mIl"/>
                             <constraint firstItem="4Ap-5x-c1A" firstAttribute="top" secondItem="H2R-YD-tQz" secondAttribute="top" id="jPM-xD-gCd"/>
-                            <constraint firstItem="vt5-uy-hIP" firstAttribute="leading" secondItem="H2R-YD-tQz" secondAttribute="leading" constant="18" id="oOl-Lf-qW4"/>
+                            <constraint firstAttribute="trailing" secondItem="cEf-p7-EpK" secondAttribute="trailing" constant="8" id="jPs-fi-ydG"/>
+                            <constraint firstItem="vt5-uy-hIP" firstAttribute="leading" secondItem="H2R-YD-tQz" secondAttribute="leading" constant="8" id="oOl-Lf-qW4"/>
                             <constraint firstItem="cEf-p7-EpK" firstAttribute="leading" secondItem="vt5-uy-hIP" secondAttribute="trailing" id="olX-vT-Et2"/>
                             <constraint firstItem="hSL-Fw-oU3" firstAttribute="top" secondItem="CFL-xy-mKc" secondAttribute="bottom" id="som-tr-1nT"/>
                             <constraint firstAttribute="trailing" secondItem="vt5-uy-hIP" secondAttribute="trailing" constant="64" id="xB2-Yq-TLO"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="xB2-Yq-TLO"/>
+                                <exclude reference="2ax-D3-qzs"/>
                                 <exclude reference="4lp-VQ-XCP"/>
                                 <exclude reference="olX-vT-Et2"/>
+                                <exclude reference="xB2-Yq-TLO"/>
                             </mask>
                         </variation>
                     </view>

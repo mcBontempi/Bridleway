@@ -18,20 +18,16 @@
 #import <AudioToolbox/AudioServices.h>
 #import "MapViewController.h"
 
+const double minDistance = 30.0;
+
 @interface ViewController () <CLLocationManagerDelegate>
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
-
 @property (strong, nonatomic) GPXRoot *root;
 @property (strong, nonatomic) NSMutableArray *pointArrayArray;
 @property (strong, nonatomic) NSMutableArray *interpolatedPointArray;
-
 @property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
-
 @property (nonatomic, assign) NSTimeInterval timeSinceLast;
-@property (weak, nonatomic) IBOutlet UISlider *slider;
-@property (weak, nonatomic) IBOutlet UILabel *sliderLabel;
-
 @property (nonatomic, assign) BOOL found;
 
 @end
@@ -41,7 +37,7 @@
 - (NSMutableArray *)pointArrayArray
 {
   if (!_pointArrayArray) {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"ttmp" ofType:@"gpx"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"ToUttox" ofType:@"gpx"];
     self.root = [GPXParser parseGPXAtPath:path];
     
     [self populateArray];
@@ -49,15 +45,6 @@
   }
   
   return _pointArrayArray;
-}
-
-- (IBAction)sliderValueChanged:(id)sender
-{
-  [self updateSliderLabel];
-}
-
-- (void)updateSliderLabel {
-  self.sliderLabel.text = [NSString stringWithFormat:@"%.2fm", self.slider.value];
 }
 
 - (void)viewDidLoad {
@@ -78,11 +65,7 @@
   
   [super viewDidLoad];
   
-  self.slider.value = 25;
-  
   self.timeSinceLast = [[NSDate date] timeIntervalSince1970];
-  
-  [self updateSliderLabel];
   
 }
 
@@ -101,7 +84,6 @@
 {
   NSTimeInterval start = [[NSDate date] timeIntervalSince1970];
   
-  
   if (start - self.timeSinceLast > 5) {
     
     self.timeSinceLast  = start;
@@ -109,33 +91,12 @@
     CLLocation *currentLocation = locations.firstObject;
     __block double minimumDistance = MAXFLOAT;
     
-    __block NSInteger count = 0;
-    
-    /*
-    [self.pointArray enumerateObjectsUsingBlock:^(CLLocation *location, NSUInteger idx, BOOL *stop) {
-      double distance = [location distanceFromLocation:currentLocation];
-      minimumDistance = MIN(minimumDistance, distance);
-      
-      count++;
-    }];
-    */
-    
     [self.interpolatedPointArray enumerateObjectsUsingBlock:^(CLLocation *location, NSUInteger idx, BOOL *stop) {
       double distance = [location distanceFromLocation:currentLocation];
       minimumDistance = MIN(minimumDistance, distance);
-      
-      count++;
     }];
     
-    NSLog(@"minimum distance%f", minimumDistance);
-    
-    NSLog(@"%ld",(long)count);
-    
-    NSTimeInterval end = [[NSDate date] timeIntervalSince1970];
-    
-    NSLog(@"%f", end - start );
-    
-    if (minimumDistance > self.slider.value) {
+    if (minimumDistance > minDistance) {
       AudioServicesPlaySystemSound (1033);
       
       self.found = NO;
@@ -144,7 +105,6 @@
       if (self.found == NO) {
         AudioServicesPlaySystemSound (1028);
       }
-      
       self.found = YES;
     }
     

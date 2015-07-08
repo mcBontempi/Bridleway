@@ -14,11 +14,12 @@
 @implementation MapViewController
 - (IBAction)zoomButtonPressed:(id)sender
 {
-  [self.mapView setUserTrackingMode:MKUserTrackingModeNone animated:YES];
+  [self.mapView setUserTrackingMode:MKUserTrackingModeFollowWithHeading animated:YES];
 }
 - (IBAction)zoom2ButtonPressed:(id)sender
 {
-  [self.mapView setUserTrackingMode:MKUserTrackingModeFollowWithHeading animated:YES];
+  [self calculateBoundingRect];
+    [self.mapView setVisibleMapRect:self.boundingRect animated:YES];
 }
 
 - (void)viewDidLoad
@@ -31,7 +32,6 @@
   // [self removeMapTiles];
   [self popolateMapWithPolyline];
   
-  self.zoomButton.hidden = YES;
   [self.mapView setVisibleMapRect:self.boundingRect animated:YES];
 }
 
@@ -75,7 +75,7 @@
   }];
   
   
-  self.boundingRect = MKMapRectInset(self.boundingRect, -self.boundingRect.size.width/10, -self.boundingRect.size.height/10);
+  self.boundingRect = MKMapRectInset(self.boundingRect, -self.boundingRect.size.width / 2, -self.boundingRect.size.height/2);
   
   
   
@@ -124,19 +124,13 @@
 {
   if (mode == MKUserTrackingModeNone) {
     
-    [self calculateBoundingRect];
-    
-    [self.mapView setVisibleMapRect:self.boundingRect animated:YES];
-    self.zoomButton.hidden = YES;
-    self.zoom2Button.hidden = NO;
+    self.zoomButton.hidden = NO;
   }
   else if (mode == MKUserTrackingModeFollow) {
     self.zoomButton.hidden = NO;
-    self.zoom2Button.hidden = YES;
   }
   else if (mode == MKUserTrackingModeFollowWithHeading) {
     self.zoomButton.hidden = YES;
-    self.zoom2Button.hidden = YES;
   }
 }
 

@@ -28,7 +28,7 @@
   
   self.mapView.delegate = self;
   self.mapView.showsUserLocation = YES;
-  self.mapView.mapType = MKMapTypeSatellite;
+  self.mapView.mapType = MKMapTypeHybrid;
   // [self removeMapTiles];
   [self popolateMapWithPolyline];
   
@@ -38,7 +38,7 @@
 - (void)removeMapTiles
 {
   self.tileOverlay = [[MKTileOverlay alloc] init];
-  self.tileOverlay.canReplaceMapContent=YES;
+  self.tileOverlay.canReplaceMapContent=NO;
   [self.mapView addOverlay:self.tileOverlay level:MKOverlayLevelAboveLabels];
 }
 

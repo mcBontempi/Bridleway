@@ -12,7 +12,7 @@
 #import <CoreLocation/CoreLocation.h>
 
 
-@interface AppDelegate ()
+@interface AppDelegate () <CLLocationManagerDelegate>
 @property (strong, nonatomic) CLLocationManager *locationManager;
 
 @end
@@ -20,26 +20,20 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  
-  
-  
-  
-  self.locationManager = [[CLLocationManager alloc] init];
-  self.locationManager.delegate = self;
-  
-  self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-  // self.locationManager.distanceFilter = 2;
-  
-  [self.locationManager requestAlwaysAuthorization];
-  [self.locationManager startUpdatingLocation];
-  
-  
-  
-  
-  
-  
-  
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    [self.locationManager requestAlwaysAuthorization];
+    [self.locationManager startUpdatingLocation];
+    
+    return YES;
+}
+
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
     return YES;
 }
 

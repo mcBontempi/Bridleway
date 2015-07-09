@@ -10,6 +10,9 @@
 
 @interface ViewController : UIViewController
 
+@property (strong, nonatomic) NSMutableArray *pointArrayArray;
+
+- (void)refresh;
 
 @end
 

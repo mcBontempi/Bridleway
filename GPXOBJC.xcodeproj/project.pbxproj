@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		363FA8541422BEC2F7BB1C07 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FAA48931B2A5C8AF47DA8A4 /* libPods.a */; };
+		D626B54C1B4EC11A0041D765 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D626B54A1B4EC11A0041D765 /* Fabric.framework */; };
+		D626B54D1B4EC11A0041D765 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D626B54B1B4EC11A0041D765 /* Crashlytics.framework */; };
 		D6EF26791B4416E400AA5B68 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EF26781B4416E400AA5B68 /* main.m */; };
 		D6EF267C1B4416E400AA5B68 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EF267B1B4416E400AA5B68 /* AppDelegate.m */; };
 		D6EF267F1B4416E400AA5B68 /* GPXOBJC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6EF267D1B4416E400AA5B68 /* GPXOBJC.xcdatamodeld */; };
@@ -39,6 +41,8 @@
 		392EC95EBB6E8103F3204D00 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		3FAA48931B2A5C8AF47DA8A4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A0F586A1CCF2378AA6944A9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		D626B54A1B4EC11A0041D765 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		D626B54B1B4EC11A0041D765 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		D6EF26731B4416E400AA5B68 /* OnTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6EF26771B4416E400AA5B68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6EF26781B4416E400AA5B68 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -69,8 +73,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD0A1E931B46E9C200029C87 /* AudioToolbox.framework in Frameworks */,
+				D626B54C1B4EC11A0041D765 /* Fabric.framework in Frameworks */,
 				FD0A1E911B46D21B00029C87 /* MapKit.framework in Frameworks */,
 				D6EF26A21B4428DE00AA5B68 /* CoreLocation.framework in Frameworks */,
+				D626B54D1B4EC11A0041D765 /* Crashlytics.framework in Frameworks */,
 				363FA8541422BEC2F7BB1C07 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -108,6 +114,8 @@
 		D6EF266A1B4416E400AA5B68 = {
 			isa = PBXGroup;
 			children = (
+				D626B54A1B4EC11A0041D765 /* Fabric.framework */,
+				D626B54B1B4EC11A0041D765 /* Crashlytics.framework */,
 				D6EF26751B4416E400AA5B68 /* GPXOBJC */,
 				D6EF26921B4416E400AA5B68 /* GPXOBJCTests */,
 				D6EF26741B4416E400AA5B68 /* Products */,
@@ -184,6 +192,7 @@
 				D6EF26701B4416E400AA5B68 /* Frameworks */,
 				D6EF26711B4416E400AA5B68 /* Resources */,
 				37F6FC1074C008CB379AA49D /* Copy Pods Resources */,
+				D626B5491B4EC0E40041D765 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -309,6 +318,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		D626B5491B4EC0E40041D765 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 3ef96aea5c3fc3bce538d64de1b929e339cf407f 1280a7ecf875ed15aa7be8f93a3ffa0387bdf2b0dbfc4848097db199ccbd51df";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -448,10 +470,15 @@
 			baseConfigurationReference = 392EC95EBB6E8103F3204D00 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: daren taylor (7RBFWSSDU9)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = GPXOBJC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = OnTrack;
+				PROVISIONING_PROFILE = "4470be91-4da8-4003-afb2-2a713ac3623c";
 			};
 			name = Debug;
 		};
@@ -460,10 +487,15 @@
 			baseConfigurationReference = 6A0F586A1CCF2378AA6944A9 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: daren taylor (7RBFWSSDU9)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = GPXOBJC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = OnTrack;
+				PROVISIONING_PROFILE = "4470be91-4da8-4003-afb2-2a713ac3623c";
 			};
 			name = Release;
 		};

@@ -7,33 +7,39 @@
 //
 
 #import "AppDelegate.h"
-
-
 #import <CoreLocation/CoreLocation.h>
+#import "ViewController.h"
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
 
-
-@interface AppDelegate () <CLLocationManagerDelegate>
-@property (strong, nonatomic) CLLocationManager *locationManager;
-
-@end
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.locationManager = [[CLLocationManager alloc] init];
-    self.locationManager.delegate = self;
-    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    [self.locationManager requestAlwaysAuthorization];
-    [self.locationManager startUpdatingLocation];
-    
+    [Fabric with:@[CrashlyticsKit]];
+
     return YES;
 }
 
-
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
+    [Fabric with:@[CrashlyticsKit]];
+    
+    if(url !=nil)
+    {
+        NSData *urlData = [NSData dataWithContentsOfURL:url];
+        
+        NSURL *url = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+        
+        NSString *path = [NSString stringWithFormat:@"%@/local.gpx", [url path]];
+    
+        BOOL ok = [urlData writeToFile:path atomically:YES];
+    }
+    
+    self.window.rootViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateInitialViewController];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

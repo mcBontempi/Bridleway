@@ -28,11 +28,14 @@
   
   self.mapView.delegate = self;
   self.mapView.showsUserLocation = YES;
-  self.mapView.mapType = MKMapTypeHybrid;
+  self.mapView.mapType = MKMapTypeStandard;
   // [self removeMapTiles];
   [self popolateMapWithPolyline];
   
   [self.mapView setVisibleMapRect:self.boundingRect animated:YES];
+    
+    self.zoom2Button.selected = YES;
+    
 }
 
 - (void)removeMapTiles
@@ -124,13 +127,16 @@
 {
   if (mode == MKUserTrackingModeNone) {
     
-    self.zoomButton.hidden = NO;
+    self.zoomButton.selected = NO;
+      self.zoom2Button.selected = YES;
   }
   else if (mode == MKUserTrackingModeFollow) {
-    self.zoomButton.hidden = NO;
+    self.zoomButton.selected = NO;
+      self.zoom2Button.selected = YES;
   }
   else if (mode == MKUserTrackingModeFollowWithHeading) {
-    self.zoomButton.hidden = YES;
+    self.zoomButton.selected = YES;
+      self.zoom2Button.selected = NO;
   }
 }
 

@@ -29,9 +29,26 @@ const double minDistance = 30.0;
 @property (nonatomic, assign) NSTimeInterval timeSinceLast;
 @property (nonatomic, assign) BOOL found;
 
+@property (nonatomic, assign) BOOL prox;
+@property (nonatomic, assign) BOOL stat;
+@property (weak, nonatomic) IBOutlet UIButton *proxButton;
+@property (weak, nonatomic) IBOutlet UIButton *statButton;
+
 @end
 
 @implementation ViewController
+- (IBAction)proxPressed:(id)sender {
+    
+    self.prox = !self.prox;
+    
+        [self updateProxAndStatButtonsWithStatus];
+}
+- (IBAction)statPressed:(id)sender {
+    
+    self.stat = !self.stat;
+    
+    [self updateProxAndStatButtonsWithStatus];
+}
 
 - (NSMutableArray *)pointArrayArray
 {
@@ -68,6 +85,17 @@ const double minDistance = 30.0;
     
     [self interpolateWith:5];
     self.timeSinceLast = [[NSDate date] timeIntervalSince1970];
+    
+    self.prox = YES;
+    self.stat = YES;
+    
+    [self updateProxAndStatButtonsWithStatus];
+}
+
+- (void)updateProxAndStatButtonsWithStatus
+{
+    self.proxButton.selected = self.prox;
+    self.statButton.selected = self.stat;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

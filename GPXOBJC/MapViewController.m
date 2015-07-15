@@ -30,11 +30,23 @@
   self.mapView.showsUserLocation = YES;
   self.mapView.mapType = MKMapTypeStandard;
   // [self removeMapTiles];
-  [self popolateMapWithPolyline];
+    
+    [self addStreetMap];
+    
+    [self popolateMapWithPolyline];
   
   [self.mapView setVisibleMapRect:self.boundingRect animated:YES];
     
     self.zoom2Button.selected = YES;
+    
+}
+
+- (void)addStreetMap
+{
+    NSString *template = @"http://b.tile.opencyclemap.org/cycle/{z}/{x}/{y}.png";         // (1)
+    MKTileOverlay *overlay = [[MKTileOverlay alloc] initWithURLTemplate:template]; // (2)
+    overlay.canReplaceMapContent = YES;                        // (3)
+    [self.mapView addOverlay:overlay level:MKOverlayLevelAboveLabels];         // (4)
     
 }
 
@@ -77,11 +89,7 @@
     
   }];
   
-  
   self.boundingRect = MKMapRectInset(self.boundingRect, -self.boundingRect.size.width / 2, -self.boundingRect.size.height/2);
-  
-  
-  
 }
 
 - (void)popolateMapWithPolyline
@@ -97,7 +105,7 @@
     }
     MKPolyline *polyline = [MKPolyline polylineWithCoordinates:coordinates count:pointArray.count];
     MKPolylineRenderer *renderer = [[MKPolylineRenderer alloc]initWithPolyline:polyline];
-    renderer.strokeColor = [UIColor redColor];
+    renderer.strokeColor = [UIColor darkGrayColor];
     renderer.lineWidth = 3;
     
     [self.polylineArray addObject:polyline];
@@ -111,8 +119,7 @@
 - (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id<MKOverlay>)overlay
 {
   if([overlay isKindOfClass:[MKTileOverlay class]]) {
-    MKTileOverlayRenderer *tileOverlayRenderer = [[MKTileOverlayRenderer alloc] initWithTileOverlay:self.tileOverlay];
-    return tileOverlayRenderer;
+    return [[MKTileOverlayRenderer alloc] initWithTileOverlay:overlay];
   }
   NSInteger index = [self.polylineArray indexOfObject:overlay];
   return self.rendererArray[index];

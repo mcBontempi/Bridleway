@@ -10,6 +10,7 @@
 		363FA8541422BEC2F7BB1C07 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FAA48931B2A5C8AF47DA8A4 /* libPods.a */; };
 		D626B54C1B4EC11A0041D765 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D626B54A1B4EC11A0041D765 /* Fabric.framework */; };
 		D626B54D1B4EC11A0041D765 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D626B54B1B4EC11A0041D765 /* Crashlytics.framework */; };
+		D626B5531B5550FF0041D765 /* speaker30.png in Resources */ = {isa = PBXBuildFile; fileRef = D626B5521B5550FF0041D765 /* speaker30.png */; };
 		D6EF26791B4416E400AA5B68 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EF26781B4416E400AA5B68 /* main.m */; };
 		D6EF267C1B4416E400AA5B68 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EF267B1B4416E400AA5B68 /* AppDelegate.m */; };
 		D6EF267F1B4416E400AA5B68 /* GPXOBJC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6EF267D1B4416E400AA5B68 /* GPXOBJC.xcdatamodeld */; };
@@ -43,6 +44,7 @@
 		6A0F586A1CCF2378AA6944A9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D626B54A1B4EC11A0041D765 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		D626B54B1B4EC11A0041D765 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		D626B5521B5550FF0041D765 /* speaker30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speaker30.png; sourceTree = "<group>"; };
 		D6EF26731B4416E400AA5B68 /* OnTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6EF26771B4416E400AA5B68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6EF26781B4416E400AA5B68 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 		D6EF26751B4416E400AA5B68 /* GPXOBJC */ = {
 			isa = PBXGroup;
 			children = (
+				D626B5521B5550FF0041D765 /* speaker30.png */,
 				FD24C8581B4D87630005586D /* ttmp.gpx */,
 				FD25B57C1B4AEDCC00DEB5EA /* PennineBridelwayDouble.gpx */,
 				FD24C8561B4C74860005586D /* ToUttox.gpx */,
@@ -275,6 +278,7 @@
 				FD24C8571B4C74860005586D /* ToUttox.gpx in Resources */,
 				FD25B57D1B4AEDCC00DEB5EA /* PennineBridelwayDouble.gpx in Resources */,
 				FD24C8591B4D87630005586D /* ttmp.gpx in Resources */,
+				D626B5531B5550FF0041D765 /* speaker30.png in Resources */,
 				D6EF26871B4416E400AA5B68 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

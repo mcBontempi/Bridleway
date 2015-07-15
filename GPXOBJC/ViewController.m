@@ -41,7 +41,7 @@ const double minDistance = 30.0;
     
     self.prox = !self.prox;
     
-        [self updateProxAndStatButtonsWithStatus];
+    [self updateProxAndStatButtonsWithStatus];
 }
 - (IBAction)statPressed:(id)sender {
     
@@ -86,8 +86,12 @@ const double minDistance = 30.0;
     [self interpolateWith:5];
     self.timeSinceLast = [[NSDate date] timeIntervalSince1970];
     
-    self.prox = YES;
-    self.stat = YES;
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    self.prox = [defaults boolForKey:@"prox"];
+    self.stat = [defaults boolForKey:@"stat"];
+    
     
     [self updateProxAndStatButtonsWithStatus];
 }
@@ -96,6 +100,15 @@ const double minDistance = 30.0;
 {
     self.proxButton.selected = self.prox;
     self.statButton.selected = self.stat;
+    
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setBool:self.prox forKey:@"prox"];
+    [defaults setBool:self.stat forKey:@"stat"];
+    
+    
+    [defaults synchronize];
+    
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -126,13 +139,16 @@ const double minDistance = 30.0;
         }];
         
         if (minimumDistance > minDistance) {
-            AudioServicesPlaySystemSound (1033);
-            
+            if(self.prox) {
+                AudioServicesPlaySystemSound (1033);
+            }
             self.found = NO;
         }
         else {
             if (self.found == NO) {
-                AudioServicesPlaySystemSound (1028);
+                if (self.prox) {
+                    AudioServicesPlaySystemSound (1028);
+                }
             }
             self.found = YES;
         }

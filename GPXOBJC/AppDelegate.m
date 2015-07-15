@@ -15,8 +15,26 @@
 
 @implementation AppDelegate
 
+
+- (void)setupDefaults
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSNumber *prox = [defaults objectForKey:@"prox"];
+    if (!prox) {
+        [defaults setBool:YES forKey:@"prox"];
+        [defaults synchronize];
+    }
+    
+    NSNumber *stat = [defaults objectForKey:@"stat"];
+    if (!stat) {
+        [defaults setBool:YES forKey:@"stat"];
+        [defaults synchronize];
+    }
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [self setupDefaults];
+    
     [Fabric with:@[CrashlyticsKit]];
 
     return YES;
@@ -24,6 +42,9 @@
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
+    
+    [self setupDefaults];
+    
     [Fabric with:@[CrashlyticsKit]];
     
     if(url !=nil)
